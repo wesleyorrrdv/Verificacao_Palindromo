@@ -1,10 +1,8 @@
 package com.curvelo.palindromo
 
-class Palindrome {
 
-    fun isPalindrome(word:String):Boolean{
-        val cleanWord = word.toLowerCase().replace("\\W".toRegex(),"")
-        return cleanWord == cleanWord.reversed()
 
-    }
+fun isPalindrome(word: String): Boolean {
+    val cleanedWord = word.replace("\\W".toRegex(), "")
+    return cleanedWord.equals(cleanedWord.reversed(), ignoreCase = true)
 }
